@@ -3,97 +3,135 @@
 <body>
 <style>
 
-    /*body {*/
-        /*background-color: rgba(184, 186, 184, 1);*/
-    /*}*/
+    body {
+        background-color: rgba(184, 186, 184, 1);
+    }
 
-    /*fieldset {*/
-        /*background-color: rgb(175, 177, 175);*/
-    /*}*/
+    fieldset {
+        background-color: rgb(175, 177, 175);
+    }
 
-    /*h1 {*/
-        /*background-color: rgb(148, 150, 148);*/
-    /*}*/
+    h1 {
+        background-color: rgb(148, 150, 148);
+    }
 
-    /*.passed {*/
-        /*background: linear-gradient(rgba(90, 178, 90, 0.75), rgba(59, 134, 34, 0.75));*/
-        /*border-color: #3b8622;*/
-        /*margin-top: 4px;*/
-    /*}*/
+    .passed {
+        background: linear-gradient(rgba(90, 178, 90, 0.75), rgba(59, 134, 34, 0.75));
+        border-color: #3b8622;
+        margin-top: 4px;
+    }
 
-    /*.failed {*/
-        /*background: linear-gradient(rgba(172, 62, 41, 0.75), rgba(155, 36, 33, 0.75));*/
-        /*border-color: #9b2421;*/
-        /*margin-top: 4px;*/
-    /*}*/
+    .failed {
+        background: linear-gradient(rgba(172, 62, 41, 0.75), rgba(155, 36, 33, 0.75));
+        border-color: #9b2421;
+        margin-top: 4px;
+    }
 
-    /*.skipped {*/
-        /*background: linear-gradient(rgba(198, 187, 64, 0.77), rgba(174, 131, 9, 0.76));*/
-        /*border-color: #ae8309;*/
-        /*margin-top: 4px;*/
-        /*padding-left: 10px;*/
-    /*}*/
+    .skipped {
+        background: linear-gradient(rgba(198, 187, 64, 0.77), rgba(174, 131, 9, 0.76));
+        border-color: #ae8309;
+        margin-top: 4px;
+        padding-left: 10px;
+    }
 
-    /*span.location {*/
-        /*text-align: right;*/
-        /*font-size: 90%;*/
-        /*display: block;*/
-        /*float: right;*/
-        /*margin-left: 10px;*/
-    /*}*/
+    span.location {
+        text-align: right;
+        font-size: 90%;
+        display: block;
+        float: right;
+        margin-left: 10px;
+    }
 
-    /*details > p {*/
-        /*margin-left: 40px;*/
-        /*margin-top: 0;*/
-        /*margin-bottom: 0;*/
-        /*font-size: 110%;*/
-        /*display: block;*/
-        /*border-radius: 10px;*/
-        /*padding-left: 10px;*/
-        /*padding-right: 10px;*/
-    /*}*/
+    div > p {
+        margin-left: 40px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 110%;
+        display: block;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-    /*summary.attachment {*/
-        /*background-color: #c9cccb;*/
-        /*font-size: 110%;*/
-    /*}*/
+    div.attachment {
+        background-color: #c9cccb;
+        font-size: 110%;
+    }
 
-    /*summary {*/
-        /*font-size: 140%;*/
-        /*/!*border: outset #06e8ef;*!/*/
-        /*border-style: outset;*/
-        /*border-radius: 25px;*/
-        /*/!*display: inline;*!/*/
-    /*}*/
+    div.feature {
+        font-size: 100%;
+<!--         /*border: outset #06e8ef;*/
+        border-style: outset;
+        border-radius: 25px; -->
+        /*display: inline;*/
+    }
+	
+	div {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
 
-    /*pre {*/
-        /*margin-left: 45px;*/
-    /*}*/
+    pre {
+        margin-left: 45px;
+    }
 
-    /*details > details > summary {*/
-        /*font-size: 110%;*/
-        /*margin-left: 40px;*/
-        /*padding-right: 10px;*/
-    /*}*/
-
-    /*input[type=checkbox] + label {*/
-        /*display: none;*/
-    /*}*/
-    /*input[type=checkbox]:checked + label {*/
-        /*color: #c6bb40;*/
-        /*font-style: oblique;*/
-        /*float: right;*/
-        /*padding-right: 100px;*/
-        /*display: inline-block;*/
-    /*}*/
+    input[type=checkbox] + label {
+        display: none;
+    }
+    input[type=checkbox]:checked + label {
+        color: #c6bb40;
+        font-style: oblique;
+        float: right;
+        padding-right: 100px;
+        display: inline-block;
+    }
+	
+	.container {
+		margin-bottom: 5px;
+	}
+	
+	.header.step {
+		width:100%;
+	}
+	
+	.container div {
+		width:100%;
+	}
+	
+	.container .header {
+		<!--background-color:#d3d3d3;
+		padding: 2px;
+		cursor: pointer;
+		font-weight: bold; -->
+	    font-size: 100%;
+        /*border: outset #06e8ef;*/
+        border-style: outset;
+        border-radius: 25px;
+        
+		width: 75%;
+		margin-bottom: 5px;
+	}
+	
+	.content .container {
+		margin-left: 40px;
+	}
+	
+	.container .header.step {
+   width: 100%;
+	}
+		.container .container {
+   width: -moz-calc(100% - 45px);
+    width: -webkit-calc(100% - 45px);
+    width: -o-calc(100% - 45px);
+    width: calc(100% - 45px);
+	}
+	
+	.container .content {
+		display: none;
+		<!-- padding : 5px; -->
+	}
 
 </style>
-<!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
 <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
 
     <fieldset>
@@ -110,9 +148,12 @@
         </label>
     </fieldset>
 </form>
-
+<div id="id00"></div>
 <div id="id01"></div>
 <div id="id02"></div>
+
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script language="JavaScript" type="text/javascript">
 
     var tests = [];
@@ -163,7 +204,18 @@
         }
 
         function receivedText(e) {
+
             lines = e.target.result;
+			console.log(lines);
+			console.log("fffffffffff");
+			console.log(lines.slice(-10));
+			console.log("dddddddddd");
+			if (lines.slice(-10).indexOf("]") === -1) {
+				document.getElementById("id00").innerHTML = "Incomplete Result";
+				lines = lines + "]";
+			} else {
+				document.getElementById("id00").innerHTML = "";
+			}
             var myArray = JSON.parse(lines);
             myFunction(myArray);
         }
@@ -191,20 +243,20 @@
                     cssClass = scenario.elements[0].steps[j].result.status;
                     if (cssClass === 'failed') {
                         scenarioFailed = true;
-                        scenarioHTML += "<details><Summary class='" + cssClass + "'>" + scenario.elements[0].steps[j].keyword + (scenario.elements[0].steps[j].name || '');
-                        scenarioHTML += (scenario.elements[0].steps[j].line ? ("<span class='location'>" + fileLocation + ':' + scenario.elements[0].steps[j].line + "</span>") : '');
+                        scenarioHTML += "<div class='container'><div class='header step " + cssClass + "'>" + scenario.elements[0].steps[j].keyword + (scenario.elements[0].steps[j].name || '');
+                        scenarioHTML += (scenario.elements[0].steps[j].line ? ("<span class='location'>" + fileLocation + ':' + scenario.elements[0].steps[j].line + "</span>") : '') + "</div>";
                         if (scenario.elements[0].steps[j].result.error_message.lastIndexOf("VERIFICATION_MSG:", 0) === 0) {
                             var errors = scenario.elements[0].steps[j].result.error_message.replace("VERIFICATION_MSG:", '');
                             var ez = JSON.parse(errors);
-                            scenarioHTML += "</Summary><pre>";
+                            scenarioHTML += "<pre class='content'>";
                             for (var k = 0; k < ez.length; k++) {
                                 scenarioHTML += "errorMsg: " + ez[k].errorMsg + "\n";
                                 scenarioHTML += "step:     " + ez[k].step + "\n";
                                 scenarioHTML += "location: " + ez[k].location + "\n" + "\n";
                             }
-                            scenarioHTML += "</pre></details>";
+                            scenarioHTML += "</pre></div>";
                         } else {
-                            scenarioHTML += "</Summary><pre>" + scenario.elements[0].steps[j].result.error_message + "</pre></details>";
+                            scenarioHTML += "<pre class='content'>" + scenario.elements[0].steps[j].result.error_message + "</pre></div>";
                         }
                     } else {
                         scenarioHTML += "<p class='" + cssClass + "'>" + scenario.elements[0].steps[j].keyword + (scenario.elements[0].steps[j].name || '');
@@ -212,19 +264,19 @@
                     }
                     if (scenario.elements[0].steps[j].embeddings) {
                         if (scenario.elements[0].steps[j].embeddings[0].mime_type === 'image/png') {
-                            scenarioHTML += "<details><Summary class='attachment'>Screenshot</Summary>";
-                            scenarioHTML += '<img src="data:image/png;base64,' + scenario.elements[0].steps[j].embeddings[0].data + '"/>';
-                            scenarioHTML += "</details>"
+                            scenarioHTML += "<div class='container'><div class='header attachment'>Screenshot</div>";
+                            scenarioHTML += '<img class="content" src="data:image/png;base64,' + scenario.elements[0].steps[j].embeddings[0].data + '"/>';
+                            scenarioHTML += "</div>"
                         }
                     }
                 }
                 if (scenarioFailed) {
                     failedTests += 1;
                     scenarioClass = 'failed';
-                    scenarioHTML = "<details><summary class='" + scenarioClass + "'>" + scenario.name + " - [" + scenario.profile + "]<input type='checkbox' id='checkbox" + i +"'><label for='checkbox" + i +"'>Investigated</label></summary>" + scenarioHTML + "</details>";
+                    scenarioHTML = "<div class='container feature'><div class='header " + scenarioClass + "'>" + scenario.name + " - [" + scenario.profile + "]<input type='checkbox' id='checkbox" + i +"'><label for='checkbox" + i +"'>Investigated</label></div><div class='content'>" + scenarioHTML + "</div></div>";
                 } else {
                     scenarioClass = 'passed';
-                    scenarioHTML = "<details><summary class='" + scenarioClass + "'>" + scenario.name + " - [" + scenario.profile + "]</summary>" + scenarioHTML + "</details>";
+                    scenarioHTML = "<div class='container feature'><div class='header " + scenarioClass + "'>" + scenario.name + " - [" + scenario.profile + "]</div><div class='content'>" + scenarioHTML + "</div></div>";
                 }
             } else {
                 skippedTests += 1;
@@ -250,9 +302,25 @@
 
     }
 </script>
+<script>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+$('div').delegate('.header', 'click',function(){
+
+    $header = $(this);
+    //getting the next element
+    $content = $header.next();
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $content.slideToggle(500, function () {
+        //execute this after slideToggle is done
+        //change text of header based on visibility of content div
+        //$header.text(function () {
+        //    //change text based on condition
+        //    return $content.is(":visible") ? "Collapse" : "Expand";
+        //});
+    });
+
+});
+  </script>
 
 </body>
 </html>
