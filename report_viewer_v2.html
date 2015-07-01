@@ -4,34 +4,34 @@
 <style>
 
     body {
-        background-color: rgba(184, 186, 184, 1);
+        background-color: rgb(187, 200, 203);
+        min-width: 1400px;
     }
 
     fieldset {
-        background-color: rgb(175, 177, 175);
+        background-color: rgba(132, 162, 167, 0.49);
     }
 
     h1 {
-        background-color: rgb(148, 150, 148);
+        background-color: rgb(166, 188, 192);
     }
 
     .passed {
-        background: linear-gradient(rgba(90, 178, 90, 0.75), rgba(59, 134, 34, 0.75));
-        border-color: #3b8622;
+        background: linear-gradient(rgba(138, 195, 30, 0.75), rgba(28, 138, 72, 0.75)) repeat scroll 0 0 transparent;
+        border-color: rgba(27, 132, 32, 0.66);
         margin-top: 4px;
     }
 
     .failed {
-        background: linear-gradient(rgba(172, 62, 41, 0.75), rgba(155, 36, 33, 0.75));
-        border-color: #9b2421;
+        background: linear-gradient(rgba(255, 89, 53, 0.75), rgba(179, 41, 41, 0.75)) repeat scroll 0 0 transparent;
+        border-color: rgba(240, 50, 50, 0.66);
         margin-top: 4px;
     }
 
     .skipped {
-        background: linear-gradient(rgba(198, 187, 64, 0.77), rgba(174, 131, 9, 0.76));
-        border-color: #ae8309;
+        background: linear-gradient(rgba(255, 208, 72, 0.51), rgba(203, 102, 16, 0.51)) repeat scroll 0 0 transparent;
+        /*border-color: #ae8309;*/
         margin-top: 4px;
-        padding-left: 10px;
     }
 
     span.location {
@@ -40,131 +40,177 @@
         display: block;
         float: right;
         margin-left: 10px;
-    }
-
-    div > p {
-        margin-left: 40px;
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 110%;
-        display: block;
-        border-radius: 10px;
-        padding-left: 10px;
         padding-right: 10px;
     }
 
-    div.attachment {
-        background-color: #c9cccb;
-        font-size: 110%;
+    span.duration {
+        text-align: right;
+        float: right;
+        margin-left: 10px;
+        padding-right: 10px;
+        min-width: 60px;
+        display: inline;
+        text-indent: 0;
+        font-size: 90%;
     }
 
-    div.feature {
-        font-size: 100%;
-<!--         /*border: outset #06e8ef;*/
-        border-style: outset;
-        border-radius: 25px; -->
-        /*display: inline;*/
+    div.attachment {
+        font-size: 110%;
+        margin-left: 30px;
+        border-radius: 5px;
+        background: linear-gradient(rgba(30, 143, 195, 0.75), rgba(28, 80, 138, 0.75)) repeat scroll 0 0 transparent;
+        text-indent: 10px;
     }
-	
-	div {
-		margin-bottom: 0;
-		margin-top: 0;
-	}
 
     pre {
-        margin-left: 45px;
+        margin-left: 5px;
+        font-size: 90%
     }
 
     input[type=checkbox] + label {
         display: none;
     }
+
     input[type=checkbox]:checked + label {
         color: #c6bb40;
         font-style: oblique;
         float: right;
-        padding-right: 100px;
+        padding-right: 10px;
         display: inline-block;
     }
-	
-	.container {
-		margin-bottom: 5px;
-	}
-	
-	.header.step {
-		width:100%;
-	}
-	
-	.container div {
-		width:100%;
-	}
-	
-	.container .header {
-		<!--background-color:#d3d3d3;
-		padding: 2px;
-		cursor: pointer;
-		font-weight: bold; -->
-	    font-size: 100%;
-        /*border: outset #06e8ef;*/
+
+    .container {
+        margin-bottom: 3px;
+    }
+
+    .header.step {
+        width: 100%;
+    }
+
+    .container div {
+        width: 100%;
+    }
+
+    .container.feature > .header {
         border-style: outset;
-        border-radius: 25px;
-        
-		width: 75%;
-		margin-bottom: 5px;
-	}
-	
-	.content .container {
-		margin-left: 40px;
-	}
-	
-	.container .header.step {
-   width: 100%;
-	}
-		.container .container {
-   width: -moz-calc(100% - 45px);
-    width: -webkit-calc(100% - 45px);
-    width: -o-calc(100% - 45px);
-    width: calc(100% - 45px);
-	}
-	
-	.container .content {
-		display: none;
-		<!-- padding : 5px; -->
-	}
+        border-radius: 10px;
+        padding-left: 10px;
+        width: 60%;
+        margin-bottom: 3px;
+        font-size: 150%;
+    }
+
+    .container.scenario > .header {
+        border-style: outset;
+        border-radius: 10px;
+        padding-left: 10px;
+        width: 70%;
+        margin-bottom: 4px;
+        margin-left: 15px;
+        font-size: 130%;
+    }
+
+    .container.scenario > .content {
+        display: block;
+    }
+
+    .container.step {
+        text-indent: 10px;
+        border-radius: 5px;
+        margin-left: 30px;
+        font-size: 110%;
+    }
+
+    .container.step > .header {
+        border-style: outset;
+        border-radius: 8px;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .container .container {
+        width: -moz-calc(100% - 20px);
+        width: -webkit-calc(100% - 20px);
+        width: -o-calc(100% - 20px);
+        width: calc(100% - 20px);
+    }
+
+    .container .content {
+        display: none;
+    }
+
+    div.warning {
+        font-size: 200%;
+        padding-left: 20px;
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
 
 </style>
-<form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
-
-    <fieldset>
-        <h2>Json File</h2>
-        <input type='file' id='fileinput'>
-        <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
-        <label>Order By:
-            <select id='orderBy' onchange="sth(value);">
-                <option value="status">Status</option>
-                <option value="index">Index</option>
-                <option value="name">Name</option>
-                <option value="profile">Profile</option>
-            </select>
-        </label>
-    </fieldset>
-</form>
 <div id="id00"></div>
-<div id="id01"></div>
+<div id="id01" class="warning"></div>
 <div id="id02"></div>
-
-  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<div id="id03"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script language="JavaScript" type="text/javascript">
+
+    var FAILED_STATUS = 'failed';
+    var header = '';
+    if (window.location.pathname.indexOf("job/Shop-Regression-Shop-Auto-Tests-Protractor/") > -1) {
+        header = '<form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">' + ''
+                + '  <fieldset>'
+                + '    <label>Order By:'
+                + '      <select id="orderBy" onchange="reOrderTests(value);">'
+                + '        <option value="name">Name</option>'
+                + '        <option value="status">Status</option>'
+                + '        <option value="index">Index</option>'
+                + '        <option value="profile">Profile</option>'
+                + '      </select>'
+                + '    </label>'
+                + '  <input type="button" id="btnExpendAll" value="Expand all" onclick="expendAll();">'
+                + '  <input type="button" id="btnCollapseAll" value="Collapse all" onclick="collapseAll();">'
+                + '  </fieldset>'
+                + '</form>'
+    } else {
+        header = '<form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">' + ''
+                + '  <fieldset>'
+                + '    <h2>Json File</h2>'
+                + '    <input type="file" id="fileinput">'
+                + '    <input type="button" id="btnLoad" value="Load" onclick="loadFile();">'
+                + '    <label>Order By:'
+                + '      <select id="orderBy" onchange="reOrderTests(value);">'
+                + '        <option value="name">Name</option>'
+                + '        <option value="status">Status</option>'
+                + '        <option value="index">Index</option>'
+                + '        <option value="profile">Profile</option>'
+                + '      </select>'
+                + '    </label>'
+                + '  <input type="button" id="btnExpendAll" value="Expand all" onclick="expendAll();">'
+                + '  <input type="button" id="btnCollapseAll" value="Collapse all" onclick="collapseAll();">'
+                + '  </fieldset>'
+                + '</form>'
+    }
+
+    document.getElementById("id00").innerHTML = header;
 
     var tests = [];
 
-    function sth(value) {
+    $.get("report.json", function (data) {
+        var input, file, fr, lines;
+        file = input.files[0];
+        fr = new FileReader();
+        fr.onload = receivedText;
+        fr.readAsText(file);
+    });
+
+    function reOrderTests(value) {
         tests.sort(sortTests(value));
         var testResultBody = '';
         tests.forEach(function (test) {
             testResultBody += test.test;
         });
-        document.getElementById("id02").innerHTML = testResultBody;
+        document.getElementById("id03").innerHTML = testResultBody;
     }
 
     function sortTests(prop) {
@@ -180,23 +226,19 @@
 
     function loadFile() {
         var input, file, fr, lines;
-
+        tests = [];
         if (typeof window.FileReader !== 'function') {
             alert("The file API isn't supported on this browser yet.");
             return;
         }
-
         input = document.getElementById('fileinput');
         if (!input) {
             alert("Um, couldn't find the fileinput element.");
-        }
-        else if (!input.files) {
+        } else if (!input.files) {
             alert("This browser doesn't seem to support the `files` property of file inputs.");
-        }
-        else if (!input.files[0]) {
+        } else if (!input.files[0]) {
             alert("Please select a file before clicking 'Load'");
-        }
-        else {
+        } else {
             file = input.files[0];
             fr = new FileReader();
             fr.onload = receivedText;
@@ -204,123 +246,175 @@
         }
 
         function receivedText(e) {
-
             lines = e.target.result;
-			console.log(lines);
-			console.log("fffffffffff");
-			console.log(lines.slice(-10));
-			console.log("dddddddddd");
-			if (lines.slice(-10).indexOf("]") === -1) {
-				document.getElementById("id00").innerHTML = "Incomplete Result";
-				lines = lines + "]";
-			} else {
-				document.getElementById("id00").innerHTML = "";
-			}
+            if (lines.slice(-10).indexOf("]") === -1) {
+                document.getElementById("id01").innerHTML = "Incomplete Result";
+                lines = lines + "]";
+            } else {
+                document.getElementById("id01").innerHTML = "";
+            }
             var myArray = JSON.parse(lines);
-            myFunction(myArray);
+            processTests(myArray);
         }
     }
 
-    function myFunction(arr) {
-        var testResultBody = '',
-                cssClass = '',
-                scenario,
-                scenarioClass,
-                scenarioHTML,
-                fileLocation,
-                scenarioFailed,
-                failedTests = 0,
-                skippedTests = 0;
-        tests = [];
-        for (var i = 0; i < arr.length; i++) {
-            scenario = arr[i];
-            scenarioHTML = '';
-            scenarioClass = '';
-            fileLocation = scenario.uri;
-            if (scenario.elements) {
-                scenarioFailed = false;
-                for (var j = 0; j < scenario.elements[0].steps.length; j++) {
-                    cssClass = scenario.elements[0].steps[j].result.status;
-                    if (cssClass === 'failed') {
-                        scenarioFailed = true;
-                        scenarioHTML += "<div class='container'><div class='header step " + cssClass + "'>" + scenario.elements[0].steps[j].keyword + (scenario.elements[0].steps[j].name || '');
-                        scenarioHTML += (scenario.elements[0].steps[j].line ? ("<span class='location'>" + fileLocation + ':' + scenario.elements[0].steps[j].line + "</span>") : '') + "</div>";
-                        if (scenario.elements[0].steps[j].result.error_message.lastIndexOf("VERIFICATION_MSG:", 0) === 0) {
-                            var errors = scenario.elements[0].steps[j].result.error_message.replace("VERIFICATION_MSG:", '');
-                            var ez = JSON.parse(errors);
-                            scenarioHTML += "<pre class='content'>";
-                            for (var k = 0; k < ez.length; k++) {
-                                scenarioHTML += "errorMsg: " + ez[k].errorMsg + "\n";
-                                scenarioHTML += "step:     " + ez[k].step + "\n";
-                                scenarioHTML += "location: " + ez[k].location + "\n" + "\n";
-                            }
-                            scenarioHTML += "</pre></div>";
-                        } else {
-                            scenarioHTML += "<pre class='content'>" + scenario.elements[0].steps[j].result.error_message + "</pre></div>";
-                        }
-                    } else {
-                        scenarioHTML += "<p class='" + cssClass + "'>" + scenario.elements[0].steps[j].keyword + (scenario.elements[0].steps[j].name || '');
-                        scenarioHTML += (scenario.elements[0].steps[j].line ? ("<span class='location'>" + fileLocation + ':' + scenario.elements[0].steps[j].line + "</span>") : '') + "</p>";
-                    }
-                    if (scenario.elements[0].steps[j].embeddings) {
-                        if (scenario.elements[0].steps[j].embeddings[0].mime_type === 'image/png') {
-                            scenarioHTML += "<div class='container'><div class='header attachment'>Screenshot</div>";
-                            scenarioHTML += '<img class="content" src="data:image/png;base64,' + scenario.elements[0].steps[j].embeddings[0].data + '"/>';
-                            scenarioHTML += "</div>"
-                        }
-                    }
-                }
-                if (scenarioFailed) {
-                    failedTests += 1;
-                    scenarioClass = 'failed';
-                    scenarioHTML = "<div class='container feature'><div class='header " + scenarioClass + "'>" + scenario.name + " - [" + scenario.profile + "]<input type='checkbox' id='checkbox" + i +"'><label for='checkbox" + i +"'>Investigated</label></div><div class='content'>" + scenarioHTML + "</div></div>";
-                } else {
-                    scenarioClass = 'passed';
-                    scenarioHTML = "<div class='container feature'><div class='header " + scenarioClass + "'>" + scenario.name + " - [" + scenario.profile + "]</div><div class='content'>" + scenarioHTML + "</div></div>";
-                }
-            } else {
-                skippedTests += 1;
-                scenarioClass = 'skipped';
-                scenarioHTML = "<summary class='skipped'>" + scenario.name + " - [" + scenario.profile + "]</summary>";
-            }
-            tests.push({
-                name: scenario.name,
-                status: scenarioClass,
-                profile: scenario.profile,
-                index: i,
-                test: scenarioHTML
-            });
-        }
+    var featureHTMLOpen = "<div class='container feature'>";
+    var scenarioHTMLOpen = "<div class='container scenario'>";
+    var stepHTMLOpen = "<div class='container step'>";
+    var attachmentHTMLOpen = "<div class='container attachment'>";
+    var closeHTMLDiv = "</div>";
+    var stepBodyHTMLOpen = "<pre class='content'>";
+    var stepBodyHTMLClose = "</pre>";
 
+    function processTests(arrayOfFeatures) {
+        var resultHTML = "";
+        var failedTests = 0;
+        var skippedTests = 0;
+        var overallDuration = 0;
+        arrayOfFeatures.forEach(function (feature, index) {
+            var generatedFeature = featureHTMLOpen;
+            var status;
+            var scenarios;
+            var duration;
+            if (feature.elements) {
+                status = 'passed';
+                scenarios = "";
+                duration = 0;
+                feature.elements.forEach(function (scenario) {
+                    var processedScenario = processScenario(scenario, feature.uri);
+                    if (processedScenario[1] === FAILED_STATUS) {
+                        status = FAILED_STATUS;
+                        failedTests += 1;
+                    }
+                    scenarios += processedScenario[0];
+                    duration += processedScenario[2];
+                    overallDuration += duration;
+                });
+                var checkbox = status === FAILED_STATUS ? addCheckBox(index) : "";
+                generatedFeature += addHeader(feature.name + " - [" + feature.profile + "]" + checkbox, status, generateDuration(duration)) + addContentHTML(scenarios);
+            } else {
+                status = 'skipped';
+                skippedTests += 1;
+                generatedFeature += addHeader(feature.name + " - [" + feature.profile + "]", status) + closeHTMLDiv;
+            }
+            generatedFeature += closeHTMLDiv;
+            storeTestHtml(feature.name, status, feature.profile, index, generatedFeature);
+        });
         tests.sort(sortTests(document.getElementById('orderBy').value));
         tests.forEach(function (test) {
-            testResultBody += test.test;
+            resultHTML += test.test;
         });
-
-        document.getElementById("id02").innerHTML = testResultBody;
-        document.getElementById("id01").innerHTML = '<h1>Number of tests: ' + arr.length + '. Passed: ' + (arr.length - failedTests - skippedTests) + '. Failed: ' + failedTests + '. Skipped: ' + skippedTests + '</h1>';
-
+        var min = Math.floor(overallDuration / 1000000000 / 60);
+        var sec = Math.floor((overallDuration / 1000000000).toFixed(2) - min * 60);
+        document.getElementById("id03").innerHTML = resultHTML;
+        document.getElementById("id02").innerHTML = '<h1>Number of tests: ' + tests.length + '. Passed: ' + (tests.length - failedTests - skippedTests) + '. Failed: ' + failedTests + '. Skipped: ' + skippedTests + '. Time taken: ' + min + ':' + sec + '</h1>';
     }
+
+    function processScenario(scenario, location) {
+        var processedSteps = processSteps(scenario.steps, location);
+        return [(scenarioHTMLOpen + addHeader(scenario.name, processedSteps[1], generateDuration(processedSteps[2])) + addContentHTML(processedSteps[0]) + closeHTMLDiv), processedSteps[1], processedSteps[2]];
+    }
+
+    function processSteps(steps, scenarioLocation) {
+        var stepsBody = "",
+                status = 'passed',
+                durationSum = 0;
+        steps.forEach(function (step) {
+            var stepBody = "",
+                    location = generateLocation(scenarioLocation, step.line),
+                    duration = generateDuration(step.result.duration);
+            durationSum += step.result.duration ? step.result.duration : 0;
+            if (step.result.status === FAILED_STATUS) {
+                status = FAILED_STATUS;
+                if (step.result.error_message) {
+                    if (step.result.error_message.lastIndexOf("VERIFICATION_MSG:", 0) === 0) {
+                        var verificationErrors = step.result.error_message.replace("VERIFICATION_MSG:", '');
+                        var parsedErrors = JSON.parse(verificationErrors);
+                        stepBody += stepBodyHTMLOpen;
+                        for (var k = 0; k < parsedErrors.length; k++) {
+                            stepBody += "errorMsg: " + parsedErrors[k].errorMsg + "\n";
+                            stepBody += "step:     " + parsedErrors[k].step + "\n";
+                            stepBody += "location: " + parsedErrors[k].location + "\n" + "\n";
+                        }
+                        stepBody += stepBodyHTMLClose;
+                    } else {
+                        stepBody = stepBodyHTMLOpen + step.result.error_message + stepBodyHTMLClose;
+                    }
+                }
+                stepsBody += stepHTMLOpen + addHeader(step.keyword + (step.name || ''), FAILED_STATUS, duration + location) + stepBody + closeHTMLDiv;
+            } else {
+                stepsBody += addAttrToHTML(stepHTMLOpen, "class", step.result.status) + step.keyword + (step.name || '') + duration + location + addContentHTML(stepBody) + closeHTMLDiv;
+            }
+            if (step.embeddings && step.embeddings[0].mime_type == "image/png") {
+                stepsBody += attachmentHTMLOpen + addHeader("Screenshot") + "<img class='content' src='data:image/png;base64," + step.embeddings[0].data + "' style='display: none'/>" + closeHTMLDiv;
+            }
+        });
+        return [stepsBody, status, durationSum];
+    }
+
+    function storeTestHtml(name, status, profile, index, generatedFeature) {
+        tests.push({
+            name: name,
+            status: status,
+            profile: profile,
+            index: index,
+            test: generatedFeature
+        });
+    }
+
+    function addHeader(name, classValue, content) {
+        return "<div class='header " + (classValue || "") + "'>" + name + (content ? content : "") + "</div>";
+    }
+    function generateLocation(fileLocation, line) {
+        if (line) {
+            fileLocation = fileLocation.replace(/.*features./, '');
+            return "<span class='location'>" + fileLocation + ':' + line + "</span>";
+        }
+        return "";
+    }
+    function generateDuration(duration) {
+        if (duration) {
+            duration = (duration / 1000000000).toFixed(2);
+            return "<span class='duration'>" + duration + "s</span>";
+        }
+        return "<span class='duration'>N/A</span>";
+    }
+    function addCheckBox(index) {
+        return "<input type='checkbox' id='checkbox" + index + "'><label for='checkbox" + index + "'>Investigated</label>";
+    }
+    function addContentHTML(content) {
+        return "<div class='content'>" + content + "</div>";
+    }
+    function addAttrToHTML(html, attr, value) {
+        if (html.indexOf(attr + "=") > 1) {
+            return html.slice(0, html.indexOf(attr + "=") + attr.length + 2) + value + " " + html.slice(html.indexOf(attr + "=") + attr.length + 2);
+        }
+        return html.slice(0, -1) + " " + attr + "='" + value + "'" + html.slice(-1);
+    }
+
+    function expendAll() {
+        $(".content").each(function () {
+            $(this).css('display', 'block');
+        });
+    }
+    function collapseAll() {
+        $(".content").each(function () {
+            $(this).css('display', 'none');
+        });
+    }
+
 </script>
 <script>
-
-$('div').delegate('.header', 'click',function(){
-
-    $header = $(this);
-    //getting the next element
-    $content = $header.next();
-    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-    $content.slideToggle(500, function () {
-        //execute this after slideToggle is done
-        //change text of header based on visibility of content div
-        //$header.text(function () {
-        //    //change text based on condition
-        //    return $content.is(":visible") ? "Collapse" : "Expand";
-        //});
+    $('div').delegate('.header', 'click', function (element) {
+        if (element.target !== this) {
+            return;
+        }
+        var headerElement = $(this);
+        var contentElement = headerElement.next(".content");
+        contentElement.slideToggle(500, function () {
+        });
     });
-
-});
-  </script>
+</script>
 
 </body>
 </html>
